@@ -1,0 +1,18 @@
+/*Usando la base de datos tienda, muestra la descripción de las tablas articulo, puesto y venta.*/
+
+USE tienda;
+
+DESCRIBE articulo;
+DESCRIBE puesto;
+DESCRIBE venta;
+
+
+
+/*Por cada tipo de dato que encuentres llena la siguiente tabla (a mano, puedes dibujarla en un cuaderno o dónde tú prefieras).*/
+
+| Tipo      | Descripción     |
+| ----------| ---------------------- |
+| Int       | Permite almacenar valores ENTEROS. |
+| Varchar   | Permite almacenar datos de tipo cadena no Unicode de longitud variable. |
+| Timestamp | Permite almacenar datos de tipo tiempo, le afectan las configuraciones/ajustes de la zona horaria. |
+| Double    | Permite almacenar grandes números decimales (de punto flotante). |
