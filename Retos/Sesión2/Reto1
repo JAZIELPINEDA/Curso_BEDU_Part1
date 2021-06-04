@@ -1,0 +1,20 @@
+/*Usando la base de datos tienda, escribe consultas que permitan responder las siguientes preguntas.*/
+USE tienda;
+
+/*¿Qué artículos incluyen la palabra Pasta en su nombre?*/
+/*Respuesta: IDs 2,27,70,91,134,213,233,327,361,426,431,570,600,655,750,855,994 */
+SELECT *
+FROM articulo
+WHERE nombre LIKE '%pasta%';
+
+/*¿Qué artículos incluyen la palabra Cannelloni en su nombre?*/
+/*Respuesta: IDs 233 */
+SELECT *
+FROM articulo
+WHERE nombre LIKE '%Cannelloni%';
+
+/*¿Qué nombres están separados por un guión (-) por ejemplo Puree - Kiwi?*/
+/*Respuesta: Son varios, favor de ejecutar la consulta */
+SELECT *
+FROM articulo
+WHERE nombre LIKE '%-%';
