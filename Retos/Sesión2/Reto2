@@ -1,0 +1,23 @@
+/*Usando la base de datos tienda, escribe consultas que permitan responder las siguientes preguntas.*/
+USE tienda;
+
+/*¿Cuál es el promedio de salario de los puestos?*/
+/*Respuesta: 19,595.05*/
+SELECT avg(salario)
+FROM puesto;
+
+/*¿Cuántos artículos incluyen la palabra Pasta en su nombre?*/
+/*Respuesta: 17*/
+SELECT COUNT(*)
+FROM articulo
+WHERE nombre LIKE '%pasta%';
+
+/*¿Cuál es el salario mínimo y máximo?*/
+/*Respuesta: MAX 29,996.58; MIN 10,013.44*/
+SELECT MAX(salario), MIN(salario)
+FROM puesto;
+
+/*¿Cuál es la suma del salario de los últimos cinco puestos agregados?*/
+/*Respuesta: MAX 29,996.58; MIN 10,013.44*/
+SELECT MAX(salario), MIN(salario)
+FROM puesto;
