@@ -1,0 +1,19 @@
+/*Usando la base de datos tienda, escribe consultas que permitan responder las siguientes preguntas.*/
+USE tienda;
+
+/*¿Cuál es el nombre de los empleados cuyo sueldo es menor a $10,000?*/
+SELECT nombre AS Empleado, (SELECT salario FROM puesto WHERE id_puesto = e.id_puesto AND salario < 10000) AS Sueldo
+FROM empleado AS e;	
+
+/*¿Cuál es la cantidad mínima y máxima de ventas de cada empleado?*/
+SELECT (SELECT nombre FROM empleado WHERE id_empleado = v.id_empleado) AS Empleado, min(cantidad), max(cantidad)
+FROM 
+   (SELECT clave, id_empleado, count(*) AS cantidad
+   FROM venta
+   GROUP BY clave, id_empleado
+   ORDER BY clave) AS v
+GROUP BY id_empleado;
+
+/*¿Cuál es el nombre del puesto de cada empleado?*/
+SELECT nombre AS Empleado, (SELECT nombre FROM puesto WHERE id_puesto = e.id_puesto) AS Puesto
+FROM empleado AS e;
