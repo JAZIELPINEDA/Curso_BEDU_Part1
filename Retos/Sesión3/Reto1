@@ -1,0 +1,20 @@
+/*Usando la base de datos tienda, escribe consultas que permitan responder las siguientes preguntas.*/
+USE tienda;
+
+/*¿Cuál es el nombre de los empleados que realizaron cada venta?*/
+SELECT *
+FROM venta AS v
+JOIN empleado AS e
+  ON v.id_empleado = e.id_empleado;
+  
+/*¿Cuál es el nombre de los artículos que se han vendido?*/
+SELECT *
+FROM venta AS v
+LEFT JOIN articulo AS a
+  ON v.id_articulo = a.id_articulo;
+  
+/*¿Cuál es el total de cada venta?*/
+SELECT *, (precio*cantidad) AS Venta
+FROM articulo AS a
+RIGHT JOIN venta AS v
+  ON a.id_articulo = v.id_articulo;
