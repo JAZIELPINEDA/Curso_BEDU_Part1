@@ -1,0 +1,25 @@
+/*Usando como base el archivo movies.dat, limpiarlo e importar los datos en la tabla movies creada en el Reto 1.*/
+
+/*Importante: Este archivo presenta un problema muy común de encoding, es decir, la codificación con la que fue definido, no es reconocida por MySQL. Para solucionar este problema, elige una codificación diferente al momento de cargar los datos.*/
+
+/*Usando como base el archivo ratings.dat, limpiarlo e importar los datos en la tabla ratings creada en el Reto 2.*/
+
+/*Importante: Como podrás notar, este archivo tiene demasiados registros, de manera que es normal que la carga sea muy lenta. Esto es algo muy común cuando nos enfrentamos a la carga de archivos. Si ya lleva mucho tiempo y no finaliza, no te preocupes, puedes cancelar la carga.*/
+
+/*Finalmente, añade un registro en cada tabla usando INSERT INTO.*/
+
+USE bedu_costos;
+
+INSERT INTO users (id,genero,edad,ocup,cp) VALUES (7000,'F',25,20,'03100');
+
+SELECT *
+FROM users
+where id=7000;
+
+INSERT INTO movies (id,title,generos) VALUES (5000,'Los Vengadores','Comedy');
+
+SELECT *
+FROM movies
+where id=5000;
+
+![imagen](imagenes/s7e31.png)
